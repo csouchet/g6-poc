@@ -1,0 +1,25 @@
+{
+  "name": "g6-reproduction-template",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c",
+    "watch": "rollup -cw"
+  },
+  "dependencies": {
+    "@antv/g6": "latest"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^11.1.0",
+    "rollup": "^2.38.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "typescript": "^4.1.3"
+  }
+}
