@@ -1,2 +1,1 @@
-# g6-poc
-Created with CodeSandbox
+# POC using Typescript, ES6 module of G6 + Rollup
