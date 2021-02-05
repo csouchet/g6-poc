@@ -2,6 +2,8 @@ import typescript from "rollup-plugin-typescript2";
 import commonjs from "rollup-plugin-commonjs";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import builtins from "rollup-plugin-node-builtins";
+import json from "@rollup/plugin-json";
+import sizes from "rollup-plugin-sizes";
 
 import pkg from "./package.json";
 
@@ -20,7 +22,9 @@ export default [
       typescript(),
       nodeResolve({ mainFields: ["module"], modulesOnly: true }),
       commonjs(),
-      builtins()
+      builtins(),
+      sizes(),
+      json()
     ]
   }
 ];
