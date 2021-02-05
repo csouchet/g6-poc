@@ -7,6 +7,7 @@ import sizes from "rollup-plugin-sizes";
 import serve from "rollup-plugin-serve";
 import livereload from "rollup-plugin-livereload";
 import sourceMaps from "rollup-plugin-sourcemaps";
+import babel from '@rollup/plugin-babel';
 
 import * as tscompile from "typescript";
 
@@ -43,7 +44,8 @@ export default [
         }
       }),
       livereload({ watch: "dist", verbose: true }),
-      sourceMaps()
+      sourceMaps(),
+      babel({ babelHelpers: 'bundled' })
     ]
   }
 ];
